@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ball Game</title>
+        <script src="main_JS.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <script>
+            var context;
+            var canvas;
+            function drawBoard() {
+            canvas = document.getElementById("board");
+            if (canvas.getContext) {
+                context = canvas.getContext("2d");
+                init();
+                }
+            }
+        </script>
+	</head>
+
+    <body style="background-color: #3e4649" onload="drawBoard()">
+        <div style="height: 50px;width: 100%;background-color: #3e4649">
+        <h1 style="font-family: monospace, monospace; font-size: 50px;color: #22a96e;padding-left: 385px">Board Game</h1>
+        </div>
+		<div  style="top: 24px;width: 100%;text-align: center;position: relative;margin: 0 auto" id="boards">
+	        <canvas id="board" style="position: relative;border: 10px solid #22a96e;border-radius: 9px;display: inline" width=640 height=640 onclick="move(event)">not supporting with canvas</canvas>
+			<div  style="position: relative;top: -155px;height: 340px;width: 210px;border-radius: 6px;margin: 0 auto;display: inline-block" id="score">
+	            <table align="center">
+	                <tr height=20></tr>
+	                <tr><td style="color: #ffffff;font-size: 30px;font-family: monospace;width: 211px" align="center" >Score</td>
+                        <td style="border: 3px solid #ff5651;width: 500px;color: #ff6d69;font-size: 29px;font-family: monospace" align="center" id="nowScore"></td>
+                    </tr>
+	                <tr height=20></tr>
+	                <tr><td style="color: #ffffff;font-size: 28px;font-family: monospace" align="center">Highest</td>
+                        <td style="border: 3px solid #ff5651;width: 500px;color: #ff6d69;font-size: 30px;font-family: monospace"  align="center" id="highScore" colspan="2"></td>
+                    </tr>
+	                <tr><td id="shows" align="center"  colspan="2"></td></tr>
+	            </table>
+	        </div>
+	        <div>
+	        </div>
+		</div>
+    <div id="foot" style="height: 150px;width: 100%;background-color: #3e4649;margin-top: 50px;padding-top: 50px">
+            <div class="container">
+                <div>
+                    <div style="color: white;width: 330px;float: left">
+                        <header>
+                            <h2>Contact</h2>
+                            <h4>If you have any questions, contact us.</h4>
+                        </header>
+                    </div>
+                        <div style="color: white;width: 900px;padding-left: 660px;padding-top: 33px;font-size: 18px">
+                            <p>&copy; Hazert 2015. <br> Designed by Hazert.<br></p>
+                        </div>
+                </div>
+            </div>
+    </div>
+    </body>
+</html>
